@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros Emprestados</title>
+</head>
+<body>
+    <h1>Livros Emprestados</h1>
+    <hr>
+    <div>
+        {% for livro in livros %}
+            <p>Usuário: {{ livro[2] }} - Título: {{ livro[3] }} - Data do empréstimo: {{ livro[1] }}</p>  <!-- Acessa os dados pela tupla -->
+        {% else %}
+            <p>Nenhum livro emprestado encontrado.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
